@@ -7,6 +7,7 @@ cc.Class({
         _movimentacao : cc.Component,
         _controleAnimacao : cc.Component,
         _canvas : cc.Canvas,
+        vivo : true,
 
     },
 
@@ -19,7 +20,7 @@ cc.Class({
         this._canvas = cc.find("Canvas");
         this._canvas.on("mousedown", this.atirar, this);
         this._canvas.on("mousemove", this.mudarDirecaoDaAnimcao, this);
-
+        this.vivo = true;
 
     },
 
