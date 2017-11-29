@@ -15,6 +15,7 @@ cc.Class({
         this._movimentacao = this.getComponent("Movimentacao");
         this._controleAnimacao = this.getComponent("ControleDeAnimacao");
         this._gameOver = cc.find("GameOver");
+        this.alvo = cc.find("Personagem");
     },
 
     update: function (dt) {
@@ -22,17 +23,9 @@ cc.Class({
         let distancia = direcao.mag();
         this._controleAnimacao.mudaAnimacao(direcao, "Andar");
         this._movimentacao.setDirecao(direcao);
-        
+       
         if(distancia < this.distanciaAtaque){
            this.alvo.getComponent("Jogador").vivo = false;
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
 });
