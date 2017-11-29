@@ -26,6 +26,7 @@ cc.Class({
     
     update: function (deltaTime) {
         this._movimentacao.setDirecao(this._direcao);
+        this._movimentacao.andarPraFrente();
 
     },
 

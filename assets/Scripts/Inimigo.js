@@ -23,9 +23,18 @@ cc.Class({
         let distancia = direcao.mag();
         this._controleAnimacao.mudaAnimacao(direcao, "Andar");
         this._movimentacao.setDirecao(direcao);
-       
+        this._movimentacao.andarPraFrente();
+        
         if(distancia < this.distanciaAtaque){
            this.alvo.getComponent("Jogador").vivo = false;
         }
     },
+    
+    
+    
+    
+    
+    
+    
+    
 });
